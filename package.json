@@ -1,0 +1,30 @@
+{
+  "name": "relationship-works",
+  "version": "1.0.0",
+  "description": "Wordpress theme for Relationship Works",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass --watch wp-content/themes/relationship-works/styles/sass -o wp-content/themes/relationship-works/styles/css"
+  },
+  "sass": {
+    "includePaths": [
+      "./node_modules"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/legendary-lion/relationship-works.git"
+  },
+  "author": "Connor Hansen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/legendary-lion/relationship-works/issues"
+  },
+  "homepage": "https://github.com/legendary-lion/relationship-works#readme",
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "node-sass": "^4.12.0",
+    "slick-carousel": "^1.8.1"
+  }
+}

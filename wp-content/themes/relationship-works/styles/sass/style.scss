@@ -1,0 +1,288 @@
+/*
+Theme Name:		 RelationshipWorks
+Theme URI:		 http://childtheme-generator.com/
+Description:	 Relationship Works is a child theme of OceanWP, created by ChildTheme-Generator.com
+Author:			 Connor Hansen
+Author URI:		 http://childtheme-generator.com/
+Template:		 oceanwp
+Version:		 1.6.8
+Text Domain:	 relationship-works
+*/
+
+// Fonts
+@font-face {
+    font-family: 'Nexa Black';
+    src: url('../../fonts/nexa/nexa-black-webfont.woff2');
+    src: url('../../fonts/nexa/nexa-black-webfont.woff');
+}
+@font-face {
+    font-family: 'Nexa Bold';
+    src: url('../../fonts/nexa/nexa_bold-webfont.woff2');
+    src: url('../../fonts/nexa/nexa_bold-webfont.woff');
+}
+@font-face {
+    font-family: 'Nexa Regular';
+    src: url('../../fonts/nexa/nexa-regular-webfont.woff2');
+    src: url('../../fonts/nexa/nexa-regular-webfont.woff');
+}
+@font-face {
+    font-family: 'Nexa Light';
+    src: url('../../fonts/nexa/nexa_light-webfont.woff2');
+    src: url('../../fonts/nexa/nexa_light-webfont.woff');
+}
+
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+
+$theme-colors: (
+  "primary": #F56C26,
+  "secondary": #FFDD28,
+  "danger": #ff4136
+);
+
+$headings-font-family:         "Nexa Regular", "Open Sans", "Arial", "sans-serif";
+
+$btn-border-radius:            50px;
+$btn-border-radius-lg:         50px;
+$btn-border-radius-sm:         50px;
+
+$link-decoration:              underline;
+
+$enable-gradients:             true;
+
+$card-border-color: transparent;
+
+$enable-responsive-font-sizes: true;
+
+$btn-padding-y:                12px;
+$btn-padding-x:                30px;
+$btn-font-family:              "Open Sans";
+$btn-font-weight:              600;
+
+$transition-base:             all .8s ease-in-out !important;
+
+
+// Spacers
+$spacer: 1rem;
+$spacers: () !default;
+$spacers: map-merge(
+  (
+    0: 0,
+    1: $spacer * .25,
+    2: $spacer * .5,
+    3: $spacer,
+    4: $spacer * 1.5,
+    5: $spacer * 3,
+    6: $spacer * 3.5,
+    7: $spacer * 3.5,
+    8: $spacer * 4,
+    9: $spacer * 4.5,
+    10: $spacer * 5,
+  ),
+  $spacers
+);
+
+// Grid containers
+//
+// Define the maximum width of `.container` for different screen sizes.
+$grid-breakpoints: (
+  xs: 0,
+  sm: 480px,
+  md: 768px,
+  lg: 1024px
+);
+
+$container-max-widths: (
+  sm: 420px,
+  md: 720px,
+  lg: 960px
+);
+
+
+
+$enable-prefers-reduced-motion-media-query:   false !default;
+
+
+// Bootstrap
+// @import '../../node_modules/bootstrap/scss/bootstrap.scss';
+
+// Required
+@import "../../../../../node_modules/bootstrap/scss/functions";
+@import "../../../../../node_modules/bootstrap/scss/variables";
+@import "../../../../../node_modules/bootstrap/scss/mixins";
+
+// Optional
+@import "../../../../../node_modules/bootstrap/scss/card";
+@import "../../../../../node_modules/bootstrap/scss/buttons";
+@import "../../../../../node_modules/bootstrap/scss/utilities";
+@import "../../../../../node_modules/bootstrap/scss/reboot";
+@import "../../../../../node_modules/bootstrap/scss/type";
+@import "../../../../../node_modules/bootstrap/scss/images";
+@import "../../../../../node_modules/bootstrap/scss/code";
+@import "../../../../../node_modules/bootstrap/scss/grid";
+
+
+
+.bg-gradient-primary {
+background: linear-gradient(93.18deg, #872364 0%, #D6176A 100%) !important;
+}
+
+html {
+font-size: 16px !important;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: $headings-font-family;
+}
+h2 {
+    font-family: 'Nexa Bold';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 150%;
+    margin: 0;
+}
+h3 {
+    font-family: "Nexa Bold";
+    font-family: Nexa Bold;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 150%;
+}
+h4 {
+    font-family: "Nexa Regular";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 150%;
+}
+
+p {
+    font-family: 'Quicksand', sans-serif;
+    font-family: Quicksand Medium;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 175%;
+    /* or 31px */
+    letter-spacing: 0.02em;
+
+    color: #555555;
+}
+
+a {
+    text-decoration: none;
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+
+section {
+    padding-top: 80px !important;
+    padding-bottom: 80px !important;
+}
+
+.bg-primary-light {
+  background: #F9F4F7;
+}
+
+.lead {
+  font-weight: 500 !important;
+}
+
+.btn-light {
+  color: theme-color("primary");
+  background: rgba(255,255,255,0.85);
+
+  &:hover {
+    color: theme-color("primary");
+    background: white;
+  }
+}
+
+// Animation for arrow links
+a.arrow-link {
+
+  &::after {
+    transition: 0.5s ease all;
+    font-family: "Font Awesome 5 Pro";
+    font-weight: 900;
+    content: "\f30b";
+    color: theme-color("primary");
+    opacity: 0.5;
+    margin-left: 4px;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  &:hover::after {
+    transform: translateX(3px);
+    opacity: 1;
+  }
+}
+
+// Fix dropdown visibility [ conflict w/ bootstrap ]
+#site-navigation-wrap .dropdown-menu {
+  position: relative;
+  top: auto !important;
+  float: none;
+  display: block;
+  border: 0;
+}
+
+// Pre-Footer overlay
+#_pre-footer {
+  position: relative !important;
+  background-blend-mode: screen;
+  background-color: theme-color("primary") !important;
+
+  &::before {
+    // TODO: Webkit supp.
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: rgba(0,0,0,0.5);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  // content: "";
+  // position: absolute;
+  // top: 0;
+  // left: 0;
+  // width: 100%;
+  // height: 100%;
+}
+
+// Fix column width
+#footer-widgets .footer-box {
+  max-width: unset !important;
+}
+
+.custom-menu-widget .oceanwp-custom-menu>ul>li {
+  border-bottom: none !important;
+}
+
+.link {
+  &-white {
+    color: #FFF;
+  }
+}
+
+.card {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+  
+  & .card-title {
+    color: theme-color("primary");
+  }
+}
+
+#footer-widgets {
+  padding-top: 60px !important;
+  padding-bottom: 60px;
+}
