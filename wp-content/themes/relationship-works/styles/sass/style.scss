@@ -194,6 +194,11 @@ section {
     padding-bottom: 80px !important;
 }
 
+
+.header-inside {
+    min-height: calc(100vh - 124px);
+}
+
 .bg-primary-light {
   background: #F9F4F7;
 }
