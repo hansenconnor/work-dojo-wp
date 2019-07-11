@@ -38,8 +38,8 @@ Text Domain:	 relationship-works
 @import "../../../../../node_modules/@fortawesome/fontawesome-pro/scss/solid.scss";
 @import "../../../../../node_modules/@fortawesome/fontawesome-pro/scss/brands.scss";
 
-// Nexa
-@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+// Quicksand font
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap');
 
 $theme-colors: (
   "primary": #F56C26,
@@ -165,8 +165,7 @@ h4 {
 }
 
 p {
-    font-family: 'Quicksand', sans-serif;
-    font-family: Quicksand Medium;
+    font-family: 'Quicksand Medium', sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 18px;
@@ -184,7 +183,62 @@ a {
     }
 }
 
+$family-secondary: 'Quicksand Medium', sans-serif;
+
+$cards-per-line: (
+    xs: 1,
+    sm: 1,
+    md: 2,
+    lg: 3,
+    xl: 5
+);
+
+.btn-circle {
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 12px;
+  line-height: 37px;
+  border-radius: 25px;
+}
+
+@each $name, $breakpoint in $grid-breakpoints {
+    @media (min-width: $breakpoint) {
+        .card-deck .card {
+            flex: 0 0 calc(#{100/map-get($cards-per-line, $name)}% - #{$grid-gutter-width});
+        }
+    }
+}
+
+.entry-header {
+  text-align: center;
+}
+
+.single .entry-title {
+  padding: 0;
+}
+
+ul.meta {
+  text-align: center;
+}
+ul.meta li {
+  font-family: $family-secondary;
+  display: inline-block;
+  float: none;
+
+  &:after {
+    content: "|";
+  }
+}
+.single .entry-title {
+  border: none;
+  margin: 0;
+}
+
 .btn {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
     font-size: 0.875rem;
 }
 

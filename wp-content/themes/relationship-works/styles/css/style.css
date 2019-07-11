@@ -8,7 +8,7 @@ Template:		 oceanwp
 Version:		 1.6.8
 Text Domain:	 relationship-works
 */
-@import url("https://fonts.googleapis.com/css?family=Quicksand&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap");
 @font-face {
   font-family: 'Nexa Black';
   src: url("../../fonts/nexa/nexa-black-webfont.woff2");
@@ -11025,8 +11025,7 @@ h4 {
   line-height: 150%; }
 
 p {
-  font-family: 'Quicksand', sans-serif;
-  font-family: Quicksand Medium;
+  font-family: 'Quicksand Medium', sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
@@ -11040,7 +11039,54 @@ a {
   a:hover {
     text-decoration: none; }
 
+.btn-circle {
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 12px;
+  line-height: 37px;
+  border-radius: 25px; }
+
+@media (min-width: 0) {
+  .card-deck .card {
+    flex: 0 0 calc(100% - 30px); } }
+
+@media (min-width: 480px) {
+  .card-deck .card {
+    flex: 0 0 calc(100% - 30px); } }
+
+@media (min-width: 768px) {
+  .card-deck .card {
+    flex: 0 0 calc(50% - 30px); } }
+
+@media (min-width: 1024px) {
+  .card-deck .card {
+    flex: 0 0 calc(33.33333% - 30px); } }
+
+.entry-header {
+  text-align: center; }
+
+.single .entry-title {
+  padding: 0; }
+
+ul.meta {
+  text-align: center; }
+
+ul.meta li {
+  font-family: "Quicksand Medium", sans-serif;
+  display: inline-block;
+  float: none; }
+  ul.meta li:after {
+    content: "|"; }
+
+.single .entry-title {
+  border: none;
+  margin: 0; }
+
 .btn {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
   font-size: 0.875rem; }
 
 section {

@@ -32,28 +32,34 @@ get_header(); ?>
                         include(locate_template('templates/header-inside.php')); ?>
                         
                     
-                        <section id="WhoWeAreQuote">
+                        <section>
+                            <div class="container">
+                                <div class="row align-items-center">
+                                    <div class="col-12 col-lg-4">
+                                        <figure><img class="rounded shadow-lg" src="/wp-content/uploads/2019/07/signal.png" alt="Red train signal"></figure>
+                                    </div>
+                                    <div class="col-12 col-lg-7 offset-lg-1">
+                                        <h3>Emotionally Focused Therapy</h3>
+                                        <p>Emotionally Focused Therapy (EFT) is a research-backed, proven approach to couples therapy.  Some people wonder, “why do you emphasis emotion in therapy? Don’t we just need to learn how to communicate better?”  Communicating better includes understanding emotion.</p>
+                                        <figure><img class="float-left" src="http://localhost:8080/wp-content/uploads/2019/07/accent-straight-gradient.png" alt="orange accent line"></figure>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <div class="container">
+                        <hr>
+                        </div>
+                        <section>
                             <div class="container">
                                 <div class="row">
-                                    <div class="col-12 col-lg-10 offset-lg-1 text-center">
-                                        <p>We are a group of therapists who are passionate about helping our clients create loving, connected relationships.</p>
-                                        <figure><img src="http://localhost:8080/wp-content/uploads/2019/07/accent-straight-gradient.png" alt="orange accent line"></figure>
+                                    <div class="col-12 col-lg-10 offset-lg-1">
+                                        <?= get_the_content(); ?>
                                     </div>
                                 </div>
                             </div>
                         </section>
 
-                        <section class="bg-light">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col">
-                                        <h3>Team Profiles</h3>                
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-
-                        <? get_template_part('templates/blog-slider'); ?>
+                        <? // get_template_part('templates/blog-slider'); ?>
 
                         <?
 
