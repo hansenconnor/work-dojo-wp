@@ -11070,15 +11070,19 @@ a {
 .single .entry-title {
   padding: 0; }
 
-ul.meta {
+.single ul.meta {
   text-align: center; }
 
-ul.meta li {
+.single ul.meta li {
   font-family: "Quicksand Medium", sans-serif;
   display: inline-block;
   float: none; }
-  ul.meta li:after {
+  .single ul.meta li:after {
     content: "|"; }
+
+.blog .thumbnail img {
+  max-height: 250px;
+  object-fit: cover; }
 
 .single .entry-title {
   border: none;
@@ -11088,6 +11092,9 @@ ul.meta li {
   font-family: 'Quicksand', sans-serif;
   font-weight: 700;
   font-size: 0.875rem; }
+
+.btn-outline-primary:hover i {
+  color: white !important; }
 
 section {
   padding-top: 80px !important;

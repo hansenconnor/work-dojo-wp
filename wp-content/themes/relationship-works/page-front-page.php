@@ -42,7 +42,7 @@ get_header(); ?>
 
                         <section id="homeTracksBanner">
                             <figure>
-                                <img src="/wp-content/uploads/2019/07/tracks.png" alt="Train tracks">
+                                <img class="train-tracks" src="/wp-content/uploads/2019/07/tracks.png" alt="Train tracks">
                             </figure>
                         </section>
                         
@@ -75,6 +75,15 @@ get_header(); ?>
                                 </div>
                             </div>
                         </section>
+
+                        <script type="text/javascript">
+                            // Initialize simple parallax 
+                            var image = document.getElementsByClassName('train-tracks');
+                            new simpleParallax(image, {
+                                delay: .6,
+                                transition: 'cubic-bezier(0,0,0,1)'
+                            });
+                        </script>
 
                         <? get_template_part('templates/blog-slider'); ?>
 

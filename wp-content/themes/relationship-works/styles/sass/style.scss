@@ -219,10 +219,10 @@ $cards-per-line: (
   padding: 0;
 }
 
-ul.meta {
+.single ul.meta {
   text-align: center;
 }
-ul.meta li {
+.single ul.meta li {
   font-family: $family-secondary;
   display: inline-block;
   float: none;
@@ -230,6 +230,11 @@ ul.meta li {
   &:after {
     content: "|";
   }
+}
+
+.blog .thumbnail img {
+  max-height: 250px;
+  object-fit: cover;
 }
 .single .entry-title {
   border: none;
@@ -242,6 +247,11 @@ ul.meta li {
     font-size: 0.875rem;
 }
 
+.btn-outline-primary:hover {
+  i {
+    color: white !important;
+  }
+}
 
 section {
     padding-top: 80px !important;

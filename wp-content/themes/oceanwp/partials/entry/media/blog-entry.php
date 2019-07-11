@@ -41,7 +41,7 @@ if ( oceanwp_get_schema_markup( 'image' ) ) {
 // Caption
 $caption = get_the_post_thumbnail_caption(); ?>
 
-<div class="thumbnail">
+<div class="thumbnail rounded overflow-hidden">
 
 	<a href="<?php the_permalink(); ?>" class="thumbnail-link">
 

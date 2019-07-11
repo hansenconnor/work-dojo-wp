@@ -97,8 +97,8 @@ get_header(); ?>
                                                         <h5><?= $name; ?></h5>
                                                         <p><small><?= $title; ?></small></p>
                                                         <a class="btn btn-primary px-4" href="<?= $profile_link; ?>">view profile</a>
-                                                        <a href="#" class="btn btn-circle btn-primary"><i class="fa fa-phone text-white"></i></a>
-                                                        <a href="#" class="btn btn-circle btn-primary"><i class="fa fa-envelope text-white"></i></a>
+                                                        <a href="tel:<?= get_field('phone_number'); ?>" class="btn btn-circle btn-primary"><i class="fa fa-phone text-white"></i></a>
+                                                        <a href="mailto:<?= get_field('email'); ?>" class="btn btn-circle btn-primary"><i class="fa fa-envelope text-white"></i></a>
                                                     </div>
                                                 </div>
                                             <?
