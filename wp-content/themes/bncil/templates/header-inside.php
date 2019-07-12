@@ -1,9 +1,9 @@
-<section class="header-inside pb-0" style="background: url('/wp-content/uploads/2019/07/accent-curved-gradient.png'); background-position: bottom; background-size: contain; background-repeat: no-repeat;">
+<section class="header-inside" style="background: url('/wp-content/uploads/2019/07/globe.png'); background-position: right; background-size: contain; background-repeat: no-repeat;">
     <div class="container">
         <div class="row">
-            <div class="col-12 col-lg-6 offset-lg-3 text-center">
-                <h1><?= $page_title ? $page_title : get_the_title(); ?></h1>
-                <p class="text-black-50"><?= $page_subtitle ? $page_subtitle : ''; ?></p>
+            <div class="col-12 col-lg-10">
+                <h2 class="text-white text-uppercase"><?= $page_title ? $page_title : get_the_title(); ?></h2>
+                <h4 class="text-white-50"><?= $page_subtitle ? $page_subtitle : ''; ?></h4>
             </div>
         </div>
     </div>

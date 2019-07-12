@@ -9,27 +9,10 @@ Version:		 1.6.8
 Text Domain:	 relationship-works
 */
 
-// Fonts
-@font-face {
-    font-family: 'Nexa Black';
-    src: url('../../fonts/nexa/nexa-black-webfont.woff2');
-    src: url('../../fonts/nexa/nexa-black-webfont.woff');
-}
-@font-face {
-    font-family: 'Nexa Bold';
-    src: url('../../fonts/nexa/nexa_bold-webfont.woff2');
-    src: url('../../fonts/nexa/nexa_bold-webfont.woff');
-}
-@font-face {
-    font-family: 'Nexa Regular';
-    src: url('../../fonts/nexa/nexa-regular-webfont.woff2');
-    src: url('../../fonts/nexa/nexa-regular-webfont.woff');
-}
-@font-face {
-    font-family: 'Nexa Light';
-    src: url('../../fonts/nexa/nexa_light-webfont.woff2');
-    src: url('../../fonts/nexa/nexa_light-webfont.woff');
-}
+
+
+// Work Sans
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,500,600,700&display=swap');
 
 // Fontawesome
 @import "../../../../../node_modules/@fortawesome/fontawesome-pro/scss/fontawesome.scss";
@@ -42,16 +25,18 @@ Text Domain:	 relationship-works
 @import url('https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap');
 
 $theme-colors: (
-  "primary": #F56C26,
-  "secondary": #FFDD28,
+  "primary": #303590,
+  "primary-lighten": #645FC1,
+  "primary-darken": #001061,
+  "secondary": #8CC740,
   "danger": #ff4136
 );
 
-$headings-font-family:         "Nexa Regular", "Open Sans", "Arial", "sans-serif";
+$headings-font-family:         "Work Sans", "Open Sans", "Arial", "sans-serif";
 
-$btn-border-radius:            50px;
-$btn-border-radius-lg:         50px;
-$btn-border-radius-sm:         50px;
+$btn-border-radius:            2px;
+$btn-border-radius-lg:         5px;
+$btn-border-radius-sm:         0px;
 
 $link-decoration:              underline;
 
@@ -61,9 +46,10 @@ $card-border-color: transparent;
 
 $enable-responsive-font-sizes: true;
 
+// Buttons
 $btn-padding-y:                12px;
-$btn-padding-x:                30px;
-$btn-font-family:              "Open Sans";
+$btn-padding-x:                60px;
+$btn-font-family:              "Work Sans";
 $btn-font-weight:              600;
 
 $transition-base:             all .8s ease-in-out !important;
@@ -105,10 +91,7 @@ $container-max-widths: (
   lg: 960px
 );
 
-
-
 $enable-prefers-reduced-motion-media-query:   false !default;
-
 
 // Bootstrap
 // @import '../../node_modules/bootstrap/scss/bootstrap.scss';
@@ -128,10 +111,19 @@ $enable-prefers-reduced-motion-media-query:   false !default;
 @import "../../../../../node_modules/bootstrap/scss/code";
 @import "../../../../../node_modules/bootstrap/scss/grid";
 
+// Generate modifier classes
+@each $color, $value in $theme-colors {
+  .text-#{$color}-darken {
+    color: theme-color-level($color, 6);
+  }
+  .bg-#{$color}-darken {
+    background-color: theme-color-level($color, 6);
+  }
+}
 
 
-.bg-gradient-primary {
-background: linear-gradient(93.18deg, #872364 0%, #D6176A 100%) !important;
+#content-wrap {
+  padding-top: 0 !important;
 }
 
 html {
@@ -140,8 +132,13 @@ font-size: 16px !important;
 h1, h2, h3, h4, h5, h6 {
     font-family: $headings-font-family;
 }
+h1 {
+  font-family: "Work Sans";
+  font-size: 64px;
+  font-weight: 600;
+}
 h2 {
-    font-family: 'Nexa Bold';
+    font-family: "Work Sans";
     font-style: normal;
     font-weight: bold;
     font-size: 48px;
@@ -149,15 +146,14 @@ h2 {
     margin: 0;
 }
 h3 {
-    font-family: "Nexa Bold";
-    font-family: Nexa Bold;
+    font-family: "Work Sans";
     font-style: normal;
-    font-weight: bold;
+    font-weight: 500;
     font-size: 36px;
     line-height: 150%;
 }
 h4 {
-    font-family: "Nexa Regular";
+    font-family: "Work Sans";
     font-style: normal;
     font-weight: normal;
     font-size: 24px;
@@ -165,15 +161,13 @@ h4 {
 }
 
 p {
-    font-family: 'Quicksand Medium', sans-serif;
+    font-family: "Work Sans", sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 18px;
     line-height: 175%;
     /* or 31px */
-    letter-spacing: 0.02em;
-
-    color: #555555;
+    color: theme-color('primary');
 }
 
 a {
@@ -242,9 +236,14 @@ $cards-per-line: (
 }
 
 .btn {
+    text-transform: uppercase;
     font-family: 'Quicksand', sans-serif;
     font-weight: 700;
     font-size: 0.875rem;
+}
+
+.btn {
+  box-shadow: 0px 1px 11px rgba(0, 0, 0, 0.2);
 }
 
 .btn-outline-primary:hover {
@@ -260,7 +259,7 @@ section {
 
 
 .header-inside {
-    min-height: calc(100vh - 124px);
+    // min-height: calc(100vh - 124px);
 }
 
 .bg-primary-light {
@@ -269,6 +268,10 @@ section {
 
 .lead {
   font-weight: 500 !important;
+}
+
+.btn-outline-primary {
+  background-color: rgba(100, 95, 193, 0.10)
 }
 
 .btn-light {
@@ -341,7 +344,7 @@ a.arrow-link {
 
 // Fix column width
 #footer-widgets {
-    background: linear-gradient(252.61deg, #FFDD28 0%, #F46826 100%);
+    background: theme-color('primary-darken');
 
     .footer-box {
         max-width: unset !important;

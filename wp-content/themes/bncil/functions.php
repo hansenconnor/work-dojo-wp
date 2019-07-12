@@ -25,7 +25,7 @@
 	function my_post_layout_class( $class ) {
 
 		// Alter your layout
-		if ( is_singular( 'team_member' ) ) {
+		if ( is_singular( 'team_member' ) || is_archive('service') ) {
 			$class = 'full-width';
 		}
 

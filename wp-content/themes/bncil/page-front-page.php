@@ -28,49 +28,98 @@ get_header(); ?>
 
 						?>
 
-                        <section id="homeHero">
+                        <section id="homeHero" 
+                        style="background: url('/wp-content/uploads/2019/07/hero-background.png');
+                        background-size: cover;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        min-height: calc(100vh - 74px);"
+                        class="pb-0">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-12 text-center">
+                                        <figure><img src="/wp-content/uploads/2019/07/bncil-logo-hd.png" alt="Relationship Works Logo"></figure>
+                                        <h3 class="text-white">Enterprise Risk Management Advisory Services</h3>
+                                        <h4 class="text-white">Specializing in <a class="text-secondary" href="#">Aviation</a>, <a class="text-secondary" href="#">Crisis management</a>, <a class="text-secondary" href="#">Analytics & Reporting for Threat Intelligence</a>, and <a class="text-secondary" href="#">Supply Chain Integrity Solutions</a></h4>
+                                        
+                                       <p class="mt-5">
+                                        <a class="btn btn-primary-lighten mr-2" href="/contact">Contact<a>
+                                        <a class="btn btn-outline-primary text-light" href="/services">Services</a>
+                                       </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section id="homeCompanySlider" class="bg-primary-lighten">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <!-- Slider Here -->
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section id="WelcomeToBNCIL" class="bg-light">
                             <div class="container">
                                 <div class="row">
                                     <div class="col-12 col-lg-8">
-                                        <figure><img src="/wp-content/uploads/2019/07/rw-logo-full.png" alt="Relationship Works Logo"></figure>
-                                        <a class="btn btn-primary mr-2" href="/what-is-emotionally-focused-therapy">what is EFT?</a>
-                                        <a class="btn btn-outline-primary" href="/find-us">get started <i class="fa fa-arrow-right"></i></a>
+                                        <h6 class="text-primary"><small><strong>WELCOME TO BNCIL</strong></small></h6>
+                                        <h3 class="text-primary-darken font-weight-bold">YOUR PERSONALIZED SOLUTION FOR RISK MANAGEMENT</h3>
+                                        <div class="row">
+                                            <div class="col-12 col-lg-4">
+                                                <hr>
+                                            </div>
+                                        </div>
+                                        <p class="text-dark">
+                                        As an expert in several risk areas, BNCIL is uniquely qualified and experienced in assessing, identifying and providing risk mitigation strategies. Through our collaboration with partner risk mitigation companies we can provide solutions and strategies for any size company small, large or global.BNCIL provides expert counsel and advice in a variety of disciplines, to include: <br><br>Aviation Matters, Enterprise Risk Management, Supply-Chain Solutions, Threat Intelligence Analytics & Reporting, Crisis Management Resources and Leadership and Coaching for Executives and Teams.
+                                        </p>
+                                        <p>
+                                            <a class="btn btn-primary-lighten" href="/contact">contact</a>
+                                        </p>
                                     </div>
                                 </div>
+                                <div class="row">
+                                    <div class="col-12 col-lg-4">
+                                        <figure>
+                                            <img src="#" alt="">
+                                        </figure>
+                                    </div>
+                                </div>
+                                </div>
                             </div>
-                        </section>
-
-                        <section id="homeTracksBanner">
-                            <figure>
-                                <img class="train-tracks" src="/wp-content/uploads/2019/07/tracks.png" alt="Train tracks">
-                            </figure>
                         </section>
                         
-                        <section id="WhoWeAre">
+                        <section id="ServicesOverview">
                             <div class="container">
                                 <div class="row align-items-center">
-                                    <div class="col-12 col-lg-6">
-                                        <h2>Who We Are</h2>
-                                        <h4 class="text-primary">Creating Connected Relationships</h4>
-                                        <p class="mt-4 lead">
-                                            We are a group of therapists who are passionate about helping our clients create loving, connected relationships.
-                                        </p>
-                                        <p><a class="btn btn-primary" href="/who-we-are">meet the team</a></p>
+                                    <div class="col-12">
+                                        <h2 class="text-white text-uppercase text-center">Services Overview</h2>
                                     </div>
                                     <div class="col-12 col-lg-6">
-                                        <figure style="background: url('/wp-content/uploads/2019/07/team-hd.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; height: 250px;" class="rounded"></figure>
+                                       <!-- Add Service Cards -->
+                                    </div>
+                                    <div class="col-12 text-center">
+                                       <a class="btn btn-light" href="/services">View All</a>
                                     </div>
                                 </div>
                             </div>
                         </section>
 
-                        <section id="WhatWereAbout" class="bg-light">
+                        <section id="PreFooter" class="bg-primary-darken">
                             <div class="container">
                                 <div class="row">
-                                    <div class="col-12 col-lg-10 offset-lg-1 text-center">
-                                        <h3>What We're About</h3>
-                                        <p>Unique in the Northwest Suburbs, RelationshipWorks is dedicated to…you got it…relationships.  We all know that when our relationships work, we feel better, we’re often healthier, we are more resilient in the face of challenges.  We join you in the work to make your relationships work.  More than just functioning better, our goal is bigger than that: we want greater love, connection, and – dare we say – joy in all of our lives!</p>
-                                        <figure><img src="/wp-content/uploads/2019/07/dots-orange.png" alt="orange dots"></figure>
+                                    <div class="col-12 col-lg-4">
+                                        <figure>
+                                            <img src="/wp-content/uploads/2019/07/collage.png" alt="Airport collage">
+                                        </figure>
+                                    </div>
+                                    <div class="col-12 col-lg-8">
+                                        <h6 class="text-white"><small><strong>BNCIL CEO – ROBERT POCICA</strong></small></h6>
+                                        <h3 class="text-white">Over 40 Years Of Experience</h3>
+                                        <h5 class="text-white">Specializing in <a class="text-secondary" href="#">Crisis Management</a> & <a class="text-secondary" href="#">Data Analytics</a></h5>
+                                        <p class="text-white-50">Over 40 Years of Investigative & Executive Enterprise Risk Management Leadership Experience. Specializing in Aviation Matters, Enterprise Risk Management, Supply-Chain Solutions, Threat Intelligence Analytics and Reporting and Crisis Management</p>
                                     </div>
                                 </div>
                             </div>
