@@ -1,11 +1,11 @@
 {
-  "name": "relationship-works",
+  "name": "bncil",
   "version": "1.0.0",
-  "description": "Wordpress theme for Relationship Works",
+  "description": "Wordpress installation for BNCIL (Bob's Next Chapter in Life)",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "scss": "node-sass --watch wp-content/themes/relationship-works/styles/sass -o wp-content/themes/relationship-works/styles/css"
+    "scss": "node-sass --watch wp-content/themes/bncil/styles/sass -o wp-content/themes/bncil/styles/css"
   },
   "sass": {
     "includePaths": [
@@ -14,14 +14,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/legendary-lion/relationship-works.git"
+    "url": "git+https://github.com/hansenconnor/bncil.git"
   },
   "author": "Connor Hansen",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/legendary-lion/relationship-works/issues"
+    "url": "https://github.com/legendary-lion/bncil/issues"
   },
-  "homepage": "https://github.com/legendary-lion/relationship-works#readme",
+  "homepage": "https://github.com/legendary-lion/bncil#readme",
   "dependencies": {
     "bootstrap": "^4.3.1",
     "node-sass": "^4.12.0",
