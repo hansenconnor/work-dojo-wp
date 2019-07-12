@@ -28,6 +28,7 @@ get_header(); ?>
 
 						?>
 
+                        <!-- #Hero -->
                         <section id="homeHero" 
                         style="background: url('/wp-content/uploads/2019/07/hero-background.png');
                         background-size: cover;
@@ -40,7 +41,7 @@ get_header(); ?>
                                     <div class="col-12 text-center">
                                         <figure><img src="/wp-content/uploads/2019/07/bncil-logo-hd.png" alt="Relationship Works Logo"></figure>
                                         <h3 class="text-white">Enterprise Risk Management Advisory Services</h3>
-                                        <h4 class="text-white">Specializing in <a class="text-secondary" href="#">Aviation</a>, <a class="text-secondary" href="#">Crisis management</a>, <a class="text-secondary" href="#">Analytics & Reporting for Threat Intelligence</a>, and <a class="text-secondary" href="#">Supply Chain Integrity Solutions</a></h4>
+                                        <h4 class="text-white">Specializing in <a class="text-secondary-lighten" href="#">Aviation</a>, <a class="text-secondary-lighten" href="#">Crisis management</a>, <a class="text-secondary-lighten" href="#">Analytics & Reporting for Threat Intelligence</a>, and <a class="text-secondary-lighten" href="#">Supply Chain Integrity Solutions</a></h4>
                                         
                                        <p class="mt-5">
                                         <a class="btn btn-primary-lighten mr-2" href="/contact">Contact<a>
@@ -50,17 +51,24 @@ get_header(); ?>
                                 </div>
                             </div>
                         </section>
+                        <!-- // #Hero -->
 
+
+                        <!-- #PartnerSlider -->
                         <section id="homeCompanySlider" class="bg-primary-lighten">
                             <div class="container">
                                 <div class="row">
                                     <div class="col-12">
                                         <!-- Slider Here -->
+                                        <? get_template_part('templates/blog-slider'); ?>
                                     </div>
                                 </div>
                             </div>
                         </section>
+                        <!-- // #PartnerSlider -->
 
+
+                        <!-- #Intro -->
                         <section id="WelcomeToBNCIL" class="bg-light">
                             <div class="container">
                                 <div class="row">
@@ -90,23 +98,61 @@ get_header(); ?>
                                 </div>
                             </div>
                         </section>
+                        <!-- // #Intro -->
                         
+
+                        <!-- #ServicesOverview -->
                         <section id="ServicesOverview">
                             <div class="container">
                                 <div class="row align-items-center">
                                     <div class="col-12">
                                         <h2 class="text-white text-uppercase text-center">Services Overview</h2>
                                     </div>
-                                    <div class="col-12 col-lg-6">
-                                       <!-- Add Service Cards -->
+
+
+                                    <!-- Service Card Deck -->
+                                    <div class="col-12 card-deck">
+                                        
+
+                                        <? // Get Services
+                                        $args = array(
+                                            'post_type' => 'service',
+                                            'post_status' => 'publish',
+                                            'posts_per_page' => -1
+                                        ); 
+                                        
+                                        $query = new WP_Query($args);
+
+                                        if ($query->have_posts()) : while($query->have_posts()) : $query->the_post(); ?>
+
+                                        <div class="card mb-5">
+                                            <div class="card-body">
+                                                <h4 class="card-title text-primary-lighten font-weight-bold"><? the_title(); ?></h4>
+                                                <p class="card-text text-primary-lighten" style="font-size: 16px;">
+                                                    <?= get_field('subtitle'); ?>
+                                                </p>
+                                            </div>
+                                            <div class="card-footer">
+                                                <a class="btn btn-outline-primary btn-block" href="<?= get_the_permalink(); ?>">View</a>
+                                            </div>
+                                        </div>
+
+                                        <? endwhile; endif; ?>
+
                                     </div>
+                                    <!-- // Service Card Deck -->
+
+
                                     <div class="col-12 text-center">
                                        <a class="btn btn-light" href="/services">View All</a>
                                     </div>
                                 </div>
                             </div>
                         </section>
+                        <!-- // #ServicesOverview -->
 
+
+                        <!-- #PreFooter -->
                         <section id="PreFooter" class="bg-primary-darken">
                             <div class="container">
                                 <div class="row">
@@ -124,6 +170,8 @@ get_header(); ?>
                                 </div>
                             </div>
                         </section>
+                        <!-- // #PreFooter -->
+
 
                         <script type="text/javascript">
                             // Initialize simple parallax 
@@ -134,7 +182,6 @@ get_header(); ?>
                             });
                         </script>
 
-                        <? get_template_part('templates/blog-slider'); ?>
 
                         <?
 

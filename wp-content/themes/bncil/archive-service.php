@@ -45,29 +45,13 @@ get_header(); ?>
                         </section>
 
 
-                        <section id="ServiceCards">
-                            <div class="container">
-                                <div class="row col-12">
-                                    
-                                </div>
-                            </div>
-                        </section>
 
 
-                        <div class="container">
-                        <hr>
-                        </div>
-
-
-                        <section id="SubserviceCards">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-12">
-                                        <!-- subservice cards -->
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
+                <!-- Service Cards -->
+                <section id="ServiceCards">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12 card-deck">
 
 				<?php
 				// Elementor `single` location
@@ -76,15 +60,75 @@ get_header(); ?>
 					// Start loop
 					while ( have_posts() ) : the_post();
 
-						?>
-
+                        ?>
+                            <div class="card mb-5">
+                                <div class="card-body">
+                                    <h4 class="card-title text-primary-lighten font-weight-bold"><? the_title(); ?></h4>
+                                    <p class="card-text text-primary-lighten" style="font-size: 16px;">
+                                        <?= get_field('subtitle'); ?>
+                                    </p>
+                                </div>
+                                <div class="card-footer">
+                                    <a class="btn btn-outline-primary btn-block" href="<?= get_the_permalink(); ?>">View</a>
+                                </div>
+                            </div>
                         <? // get_template_part('templates/blog-slider'); ?>
 
                         <?
 
 					endwhile;
 
-				} ?>
+                } ?>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- // Service Cards -->
+
+
+
+                <!-- Subervice Cards -->
+                <section id="SubserviceCards" class="bg-white">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12 card-deck subservice-cards">
+                                <? $args = array(
+                                    'post_type' => 'subservice',
+                                    'post_status' => 'publish',
+                                    'posts_per_page' => -1
+                                ); 
+                                
+                                $query = new WP_Query($args);
+
+                                if ($query->have_posts()) : while($query->have_posts()) : $query->the_post(); ?>
+
+                                    <? $services = get_field('service'); ?>
+
+                                <div class="card">
+                                    <div class="card-body">
+
+                                        <? if ( $services ) : foreach ( $services as $service ) : ?>
+                                            <h6 class="text-secondary text-uppercase"><small><strong><?= get_the_title($service->ID); ?></strong></small></h6>
+                                        <? endforeach; endif; ?>
+
+                                        <h5 class="card-title text-primary-lighten font-weight-bold"><? the_title(); ?></h5>
+                                        <p class="card-text font-weight-light" style="font-size: 16px;">
+                                            <?= get_field('brief_description'); ?>
+                                        </p>
+                                        <a href="<?= get_the_permalink(); ?>" class="stretched-link"></a>
+                                    </div>
+                                </div>
+                                <? endwhile; endif; ?>
+                            </div>
+                            <div class="col-12 text-center mt-5">
+                                <a class="btn btn-primary-lighten" href="/contact">Contact</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- // Subervice Cards -->
+
+
 
 				<?php do_action( 'ocean_after_content_inner' ); ?>
 

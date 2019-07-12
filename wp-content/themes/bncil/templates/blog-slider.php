@@ -1,6 +1,6 @@
 <?php
 $args = array(
-    'post_type' => 'post',
+    'post_type' => 'partner',
     'post_status' => 'publish',
     'posts_per_page' => -1
 );
@@ -11,12 +11,11 @@ $query = new WP_Query($args); ?>
     <div class="container">
         <div class="row align-items-center">
 
-            <div class="col-1 text-center">
-                <!-- Left arrow -->
+            <!-- <div class="col-1 text-center">
                 <span class="prev-arrow"><i class="fa fa-chevron-left"></i></span>
-            </div>
+            </div> -->
 
-            <div class="col-10">
+            <div class="col-12">
                 <!-- Slides -->
                 <div class="slick-slider">
 
@@ -25,22 +24,17 @@ $query = new WP_Query($args); ?>
                         $query->the_post();
 
                         $title = get_the_title();
-                        $author = get_the_author();
-                        $excerpt = get_the_excerpt();
+                        // $author = get_the_author();
+                        // $excerpt = get_the_excerpt();
                         $permalink = get_the_permalink();
-                        $featured_image = get_the_post_thumbnail_url() ? get_the_post_thumbnail_url() : 'https://picsum.photos/640/360'; ?>
+                        $logo = get_field('logo') ? get_field('logo')['url']: 'https://picsum.photos/640/360'; ?>
 
                     <div>
                         <div class="row">
-                            <div class="col-4">
-                                <figure style="background:url('<?= $featured_image; ?>'); background-size: cover; background-position: center; background-repeat: no-repeat;" class="h-100"></figure>
-                            </div>
-                            <div class="col-8 py-5">
-                                <h3><?= $title; ?></h3>
-                                <p class="small text-uppercase"><?= $author; ?></p>
-                                <p><?= $excerpt; ?></p>
-                                <a class="btn btn-primary" href="<?= $permalink; ?>">continue reading</a>
-                            </div>        
+                            <div class="col-12 text-center">
+                                <img class="img-fluid" src="<?= $logo; ?>" alt="">
+                                <!-- <figure style="background:url('<?= $logo; ?>'); background-size: cover; background-position: center; background-repeat: no-repeat;" class="h-100"></figure> -->
+                            </div>     
                         </div>
                     </div>
 
@@ -54,10 +48,9 @@ $query = new WP_Query($args); ?>
                 </div><!-- # Slides -->
             </div>
 
-            <div class="col-1 text-center">
-                <!-- Right arrow -->
+            <!-- <div class="col-1 text-center">
                 <span class="next-arrow"><i class="fa fa-chevron-right"></i></span>
-            </div>
+            </div> -->
 
         </div>
     </div>
@@ -94,11 +87,13 @@ $query = new WP_Query($args); ?>
 <script type="text/javascript">
 jQuery(document).ready(function($) {
     $(".slick-slider").slick({
-        slidesToShow: 1,
+        slidesToShow: 3,
         slidesToScroll: 1,
         adaptiveHeight: true,
         nextArrow: '.next-arrow',
-        prevArrow: '.prev-arrow'
+        prevArrow: '.prev-arrow',
+        autoplay: true,
+        duration: 2000
     });
 
 });

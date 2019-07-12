@@ -50,7 +50,7 @@ get_header(); ?>
                                         </p>
                                         <p>
                                             <a class="btn btn-outline-primary" href="/services">Services</a>
-                                            <a class="btn btn-primary" href="/services">Contact</a>
+                                            <a class="btn btn-primary-lighten" href="/services">Contact</a>
                                         </p>
                                     </div>
                                 </div>
