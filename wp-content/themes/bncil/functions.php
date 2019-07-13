@@ -10,6 +10,12 @@
 				array( $parent_style ),
 				wp_get_theme()->get('Version')
 			);
+		
+
+
+		// wp_enqueue_script('jquery', 'https://code.jquery.com/jquery-3.3.1.slim.min.js', '', '', true );
+		wp_enqueue_script('popper', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js' );
+		wp_enqueue_script('bootstrap', 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js', array( 'popper', 'jquery' ) );
 
 		// Simple Parallax
 		wp_enqueue_script('simple-parallax', 'https://cdn.jsdelivr.net/npm/simple-parallax-js@5.0.2/dist/simpleParallax.min.js' );
@@ -25,7 +31,7 @@
 	function my_post_layout_class( $class ) {
 
 		// Alter your layout
-		if ( is_singular( 'team_member' ) || is_archive('service') ) {
+		if ( is_singular( 'service' ) || is_archive('service') ) {
 			$class = 'full-width';
 		}
 

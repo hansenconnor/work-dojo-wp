@@ -31,10 +31,21 @@ get_header(); ?>
                         <?
                         $page_subtitle = 'Let\'s work together'; 
                         include(locate_template('templates/header-inside.php')); ?>
+
+                        <section class="bg-primary-lighten">
+                            <div class="container">
+                                <div class="row col-12">
+                                    <p class="text-light text-center">
+                                    If you require a near term response or the development of a longer-term strategy BNCIL is prepared to assist you in a professional and confidential manner. Remember, luck and hope are not a risk mitigation strategy….
+                                    </p>
+                                    <hr class="py-1 bg-primary w-25 rounded-sm mx-auto">
+                                </div>
+                            </div>
+                        </section>
                         
                         <section class="bg-light">
                             <div class="container">
-                                <div class="row align-items-center">
+                                <div class="row">
                                     <div class="col-12 col-lg-6">
 
                                         <h4 class="font-weight-bold text-primary-lighten">Please contact us to assist you with managing your risk.</h4>
@@ -42,7 +53,7 @@ get_header(); ?>
 
                                         <div class="row">
                                             <div class="col-12 col-md-4 col-lg-3">
-                                                <hr>
+                                                <hr class="py-1 rounded-sm bg-primary-lighten">
                                             </div>
                                         </div>
                                         
@@ -55,6 +66,7 @@ get_header(); ?>
                                     </div>
                                     <div class="col-12 col-lg-6">
                                         <!-- Contact form -->
+                                        <?= do_shortcode('[formidable id=1]'); ?>
                                     </div>
                                 </div>
                             </div>

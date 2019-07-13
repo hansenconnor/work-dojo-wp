@@ -1,12 +1,12 @@
 /*
-Theme Name:		 RelationshipWorks
+Theme Name:		 BNCIL
 Theme URI:		 http://childtheme-generator.com/
-Description:	 Relationship Works is a child theme of OceanWP, created by ChildTheme-Generator.com
+Description:	 BNCIL is a child theme of OceanWP, created by ChildTheme-Generator.com
 Author:			 Connor Hansen
 Author URI:		 http://childtheme-generator.com/
 Template:		 oceanwp
 Version:		 1.6.8
-Text Domain:	 relationship-works
+Text Domain:	 bncil
 */
 
 
@@ -100,19 +100,21 @@ $enable-prefers-reduced-motion-media-query:   false !default;
 // @import '../../node_modules/bootstrap/scss/bootstrap.scss';
 
 // Required
-@import "../../../../../node_modules/bootstrap/scss/functions";
-@import "../../../../../node_modules/bootstrap/scss/variables";
-@import "../../../../../node_modules/bootstrap/scss/mixins";
+@import "../../../../../node_modules/bootstrap/scss/bootstrap";
+// @import "../../../../../node_modules/bootstrap/scss/variables";
+// @import "../../../../../node_modules/bootstrap/scss/mixins";
 
-// Optional
-@import "../../../../../node_modules/bootstrap/scss/card";
-@import "../../../../../node_modules/bootstrap/scss/buttons";
-@import "../../../../../node_modules/bootstrap/scss/utilities";
-@import "../../../../../node_modules/bootstrap/scss/reboot";
-@import "../../../../../node_modules/bootstrap/scss/type";
-@import "../../../../../node_modules/bootstrap/scss/images";
-@import "../../../../../node_modules/bootstrap/scss/code";
-@import "../../../../../node_modules/bootstrap/scss/grid";
+// // Optional
+// @import "../../../../../node_modules/bootstrap/scss/card";
+// @import "../../../../../node_modules/bootstrap/scss/buttons";
+// @import "../../../../../node_modules/bootstrap/scss/utilities";
+// @import "../../../../../node_modules/bootstrap/scss/reboot";
+// @import "../../../../../node_modules/bootstrap/scss/type";
+// @import "../../../../../node_modules/bootstrap/scss/images";
+// @import "../../../../../node_modules/bootstrap/scss/code";
+// @import "../../../../../node_modules/bootstrap/scss/grid";
+// @import "../../../../../node_modules/bootstrap/scss/modal";
+// @import "../../../../../node_modules/bootstrap/scss/modal";
 
 // Generate modifier classes
 @each $color, $value in $theme-colors {
@@ -140,6 +142,19 @@ $enable-prefers-reduced-motion-media-query:   false !default;
       opacity: 1;
     }
   }
+}
+
+.single.single-post {
+  background-color: #f2f2f2;
+  
+  #content-wrap {
+    padding-top: 50px !important;
+  }
+}
+
+
+.modal-header {
+  border-bottom: 1px solid theme-color('primary-lighten');
 }
 
 .blog-entry-inner {
