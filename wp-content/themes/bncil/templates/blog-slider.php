@@ -32,7 +32,7 @@ $query = new WP_Query($args); ?>
                     <div>
                         <div class="row">
                             <div class="col-12 text-center">
-                                <img class="img-fluid" src="<?= $logo; ?>" alt="">
+                                <img class="img-fluid mx-auto" src="<?= $logo; ?>" alt="">
                                 <!-- <figure style="background:url('<?= $logo; ?>'); background-size: cover; background-position: center; background-repeat: no-repeat;" class="h-100"></figure> -->
                             </div>     
                         </div>

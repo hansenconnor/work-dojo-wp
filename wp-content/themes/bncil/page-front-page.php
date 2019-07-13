@@ -41,7 +41,7 @@ get_header(); ?>
                                     <div class="col-12 text-center">
                                         <figure><img src="/wp-content/uploads/2019/07/bncil-logo-hd.png" alt="Relationship Works Logo"></figure>
                                         <h3 class="text-white">Enterprise Risk Management Advisory Services</h3>
-                                        <h4 class="text-white">Specializing in <a class="text-secondary-lighten" href="#">Aviation</a>, <a class="text-secondary-lighten" href="#">Crisis management</a>, <a class="text-secondary-lighten" href="#">Analytics & Reporting for Threat Intelligence</a>, and <a class="text-secondary-lighten" href="#">Supply Chain Integrity Solutions</a></h4>
+                                        <h4 class="text-white">Specializing in <a class="text-secondary-lighten" href="#">Aviation</a>, <a class="text-secondary-lighten" href="#">Crisis Management</a>, <a class="text-secondary-lighten" href="#">Analytics & Reporting for Threat Intelligence</a>, <a class="text-secondary-lighten" href="#">Supply Chain Integrity Solutions</a>, <a class="text-secondary-lighten" href="#">Leadership and Coaching for Individuals and Teams</a></h4>
                                         
                                        <p class="mt-5">
                                         <a class="btn btn-primary-lighten mr-2" href="/contact">Contact<a>
@@ -81,9 +81,9 @@ get_header(); ?>
                                             </div>
                                         </div>
                                         <p class="text-dark">
-                                        As an expert in several risk areas, BNCIL is uniquely qualified and experienced in assessing, identifying and providing risk mitigation strategies. Through our collaboration with partner risk mitigation companies we can provide solutions and strategies for any size company small, large or global.BNCIL provides expert counsel and advice in a variety of disciplines, to include: <br><br>Aviation Matters, Enterprise Risk Management, Supply-Chain Solutions, Threat Intelligence Analytics & Reporting, Crisis Management Resources and Leadership and Coaching for Executives and Teams.
+                                        As an expert in several risk areas, BNCIL is uniquely qualified and experienced in assessing, identifying and providing risk mitigation strategies. Through our collaboration with partner risk mitigation companies we can provide solutions and strategies for any size company small, large or global. <br><br><strong>BNCIL provides expert counsel and advice in a variety of disciplines including:</strong> <br><br>Enterprise Risk Management Advisory Services, Aviation Matters, Crisis Management Resources, Analytics & Reporting for Threat Intelligence, Supply-Chain Solutions, Leadership and Coaching for Executives and Teams.
                                         </p>
-                                        <p>
+                                        <p class="mt-5">
                                             <a class="btn btn-primary-lighten" href="/contact">contact</a>
                                         </p>
                                     </div>
@@ -105,10 +105,9 @@ get_header(); ?>
                         <section id="ServicesOverview">
                             <div class="container">
                                 <div class="row align-items-center">
-                                    <div class="col-12">
+                                    <div class="col-12 mb-5">
                                         <h2 class="text-white text-uppercase text-center">Services Overview</h2>
                                     </div>
-
 
                                     <!-- Service Card Deck -->
                                     <div class="col-12 card-deck">
@@ -164,7 +163,7 @@ get_header(); ?>
                                     <div class="col-12 col-lg-8">
                                         <h6 class="text-white"><small><strong>BNCIL CEO – ROBERT POCICA</strong></small></h6>
                                         <h3 class="text-white">Over 40 Years Of Experience</h3>
-                                        <h5 class="text-white">Specializing in <a class="text-secondary" href="#">Crisis Management</a> & <a class="text-secondary" href="#">Data Analytics</a></h5>
+                                        <h5 class="text-white">Specializing in <a class="text-secondary-lighten" href="#">Enterprise Risk Management</a>, <a class="text-secondary-lighten" href="#">Aviation</a>, <a class="text-secondary-lighten" href="#">Crisis Management</a>, <a class="text-secondary-lighten" href="#">Analytics & Reporting for Threat Intelligence</a>, <a class="text-secondary-lighten" href="#">Supply Chain Integrity Solutions</a>, <a class="text-secondary-lighten" href="#">Leadership and Coaching for Individuals and Teams</a></h5>
                                         <p class="text-white-50">Over 40 Years of Investigative & Executive Enterprise Risk Management Leadership Experience. Specializing in Aviation Matters, Enterprise Risk Management, Supply-Chain Solutions, Threat Intelligence Analytics and Reporting and Crisis Management</p>
                                     </div>
                                 </div>

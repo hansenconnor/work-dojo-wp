@@ -423,7 +423,7 @@ a.arrow-link {
         margin-left: 0;
         border: 0;
         padding-left: 0;
-        text-transform: lowercase;
+        text-transform: capitalize;
     }
     &::before {
         // TODO: Webkit supp.

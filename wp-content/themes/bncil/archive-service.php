@@ -20,7 +20,8 @@ get_header(); ?>
                 <?php do_action( 'ocean_before_content_inner' ); ?>
                 
                 <?
-                        $page_subtitle = 'Crisis Management, Data Analytics & Crisis Recovery';
+                        $page_title = 'Services Provided';
+                        $page_subtitle = 'Specializing in Enterprise Risk Management, Aviation Matters, Supply-Chain Integrity Solutions and more.';
                         include(locate_template('templates/header-inside.php')); ?>
                         
                     
@@ -29,7 +30,7 @@ get_header(); ?>
                                 <div class="row align-items-center">
                                     <div class="col-12 col-lg-8">
                                         <p class="text-primary-lighten">
-                                        BNCIL provides personalized expert counsel and advice in a variety of disciplines, to include: <br><br>Aviation Matters, Enterprise Risk Management, Supply-Chain Solutions, Threat Intelligence Analytics &Reporting, Crisis Management Resources and Leadership and Coaching for Executives and Teams.
+                                        <strong>BNCIL provides personalized expert counsel and advice in a variety of disciplines including:</strong> <br><br>Enterprise Risk Management, Aviation Matters, Crisis Management, Analytics and Reporting for Threat Intelligence, Supply-Chain Integrity Solutions, Leadership and Coaching for Individuals and Teams
                                         </p>
                                         <p class="text-primary-darken">
                                             <strong>

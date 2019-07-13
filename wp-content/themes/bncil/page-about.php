@@ -46,7 +46,7 @@ get_header(); ?>
                                     <div class="col-12 col-lg-8">
                                         <h2 class="text-primary-darken">About Bob</h2>
                                         <p class="lead">
-                                        Specializing in Aviation Matters, Enterprise Risk Management, Supply-Chain Solutions, Threat Intelligence Analytics and Reporting and Crisis Management
+                                        Specializing in Enterprise Risk Management, Aviation Matters, Crisis Management, Analytics and Reporting for Threat Intelligence, Supply-Chain Integrity Solutions, Leadership and Coaching for Individuals and Teams
                                         </p>
                                         <p>
                                             <a class="btn btn-outline-primary" href="/services">Services</a>

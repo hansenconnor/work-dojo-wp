@@ -47,7 +47,7 @@ get_header(); ?>
                                         </div>
                                         
                                         <p>
-                                            <i class="far fa-phone mr-3"></i><a href="tel:8473122828"> 847.312.2828</a>
+                                            <i class="far fa-phone mr-3"></i><a href="tel:4154887625"> 415-488-7625</a>
                                         </p>
                                         <p>
                                         <i class="far fa-envelope mr-3"></i><a class="pl-0" href="mailto:bob@bncil.com">bob@bncil.com</a>

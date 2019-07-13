@@ -11446,7 +11446,7 @@ a.arrow-link:hover::after {
     margin-left: 0;
     border: 0;
     padding-left: 0;
-    text-transform: lowercase; }
+    text-transform: capitalize; }
   #footer-widgets::before {
     content: "";
     display: block;
