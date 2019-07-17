@@ -1,16 +1,18 @@
 /*
-Theme Name:		 BNCIL
+Theme Name:		 WorkDojo
 Theme URI:		 http://childtheme-generator.com/
-Description:	 BNCIL is a child theme of OceanWP, created by ChildTheme-Generator.com
+Description:	 WorkDojo is a child theme of OceanWP, created by ChildTheme-Generator.com
 Author:			 Connor Hansen
 Author URI:		 http://childtheme-generator.com/
 Template:		 oceanwp
 Version:		 1.6.8
-Text Domain:	 bncil
+Text Domain:	 workdojo
 */
 @import "custom";
-@import "~bootstrap-material-design/scss/bootstrap-material-design";
-@import "~bootstrap-material-design/scss/ripples";
+@import '../../../../../node_modules/bootstrap/scss/bootstrap';
+// @import '../../../../../node_modules/bootstrap/scss/functions';
+@import "../../../../../node_modules/bootstrap-material-design/scss/bootstrap-material-design";
+// @import "../../../../../node_modules/bootstrap-material-design/scss/ripples";
 
 .card {
     transition: 0.5s ease all;
