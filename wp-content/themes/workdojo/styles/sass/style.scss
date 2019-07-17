@@ -1,0 +1,81 @@
+/*
+Theme Name:		 BNCIL
+Theme URI:		 http://childtheme-generator.com/
+Description:	 BNCIL is a child theme of OceanWP, created by ChildTheme-Generator.com
+Author:			 Connor Hansen
+Author URI:		 http://childtheme-generator.com/
+Template:		 oceanwp
+Version:		 1.6.8
+Text Domain:	 bncil
+*/
+@import "custom";
+@import "~bootstrap-material-design/scss/bootstrap-material-design";
+@import "~bootstrap-material-design/scss/ripples";
+
+.card {
+    transition: 0.5s ease all;
+    
+    &:hover {
+        box-shadow: $box-shadow-lg;
+    }
+}
+
+#get_started {
+    background: url('~assets/images/torii-gate-group.png');
+    background-size: contain;
+    background-position: center top;
+    background-repeat: no-repeat;
+}
+
+
+// Hero icon animations
+#torii_gate {
+    
+    /* 
+     * Make the initial position to be the center of the circle you want this
+     * object follow.
+     */
+    position: absolute;
+    left: 315px;
+    top: 143px;
+
+    /*
+     * Sets up the animation duration, timing-function (or easing)
+     * and iteration-count. Ensure you use the appropriate vendor-specific 
+     * prefixes as well as the official syntax for now. Remember, tools like 
+     * CSS Please are your friends!
+     */
+    -webkit-animation: myOrbit 7s linear infinite; /* Chrome, Safari 5 */
+       -moz-animation: myOrbit 7s linear infinite; /* Firefox 5-15 */
+         -o-animation: myOrbit 7s linear infinite; /* Opera 12+ */
+            animation: myOrbit 7s linear infinite; /* Chrome, Firefox 16+, 
+                                                      IE 10+, Safari 5 */
+    
+    
+    
+}
+
+/*
+ * Set up the keyframes to actually describe the begining and end states of 
+ * the animation.  The browser will interpolate all the frames between these 
+ * points.  Again, remember your vendor-specific prefixes for now!
+ */
+@-webkit-keyframes myOrbit {
+    from { -webkit-transform: rotate(0deg) translateX(150px) rotate(0deg); }
+    to   { -webkit-transform: rotate(360deg) translateX(150px) rotate(-360deg); }
+}
+
+@-moz-keyframes myOrbit {
+    from { -moz-transform: rotate(0deg) translateX(150px) rotate(0deg); }
+    to   { -moz-transform: rotate(360deg) translateX(150px) rotate(-360deg); }
+}
+
+@-o-keyframes myOrbit {
+    from { -o-transform: rotate(0deg) translateX(150px) rotate(0deg); }
+    to   { -o-transform: rotate(360deg) translateX(150px) rotate(-360deg); }
+}
+
+@keyframes myOrbit {
+    from { transform: rotate(0deg) translateX(150px) rotate(0deg); }
+    to   { transform: rotate(360deg) translateX(150px) rotate(-360deg); }
+}

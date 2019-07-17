@@ -1,0 +1,12 @@
+$theme-colors: (
+  "primary": #8BC34A,
+  "primary-lighten": #9CCC65,
+  "secondary": #6C27B8,
+  "danger": #ff4136
+);
+
+@each $color, $value in $theme-colors {
+    .bg-#{$color} {
+      background-color: $color;
+    }
+  }
