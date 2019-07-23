@@ -14,6 +14,10 @@ Text Domain:	 workdojo
 @import "../../../../../node_modules/bootstrap-material-design/scss/bootstrap-material-design";
 // @import "../../../../../node_modules/bootstrap-material-design/scss/ripples";
 
+html {
+    font-size: 16px;
+}
+
 .card {
     transition: 0.5s ease all;
     
@@ -22,39 +26,65 @@ Text Domain:	 workdojo
     }
 }
 
+#progress_bar {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 0;
+    height: 3px;
+    display: block;
+    background-color: theme-color("primary");
+}
+
 #get_started {
-    background: url('~assets/images/torii-gate-group.png');
+    background: url('/wp-content/uploads/2019/07/torii-gate-group.png');
     background-size: contain;
-    background-position: center top;
+    background-position: center bottom;
     background-repeat: no-repeat;
 }
 
 
-// Hero icon animations
-#torii_gate {
-    
-    /* 
-     * Make the initial position to be the center of the circle you want this
-     * object follow.
-     */
-    position: absolute;
-    left: 315px;
-    top: 143px;
+#torii_gate__floating,
+#yin_yang__floating,
+#fishes__floating {
+    width: 50px;
+}
 
-    /*
-     * Sets up the animation duration, timing-function (or easing)
-     * and iteration-count. Ensure you use the appropriate vendor-specific 
-     * prefixes as well as the official syntax for now. Remember, tools like 
-     * CSS Please are your friends!
-     */
-    -webkit-animation: myOrbit 7s linear infinite; /* Chrome, Safari 5 */
-       -moz-animation: myOrbit 7s linear infinite; /* Firefox 5-15 */
-         -o-animation: myOrbit 7s linear infinite; /* Opera 12+ */
-            animation: myOrbit 7s linear infinite; /* Chrome, Firefox 16+, 
+// Hero icon animations
+#torii_gate__floating {
+    position: absolute;
+    left: 100px;
+    top: 150px;
+
+    -webkit-animation: orbitSmall 25s linear infinite; /* Chrome, Safari 5 */
+       -moz-animation: orbitSmall 25s linear infinite; /* Firefox 5-15 */
+         -o-animation: orbitSmall 25s linear infinite; /* Opera 12+ */
+            animation: orbitSmall 25s linear infinite; /* Chrome, Firefox 16+, 
                                                       IE 10+, Safari 5 */
-    
-    
-    
+}
+
+#yin_yang__floating {
+    position: absolute;
+    left: 500px;
+    top: 100px;
+
+ -webkit-animation: orbitSmall 10s linear infinite; /* Chrome, Safari 5 */
+    -moz-animation: orbitSmall 10s linear infinite; /* Firefox 5-15 */
+      -o-animation: orbitSmall 10s linear infinite; /* Opera 12+ */
+         animation: orbitSmall 10s linear infinite; /* Chrome, Firefox 16+, 
+                                                   IE 10+, Safari 5 */
+}
+
+#fishes__floating {
+    position: absolute;
+    left: 750px;
+    top: 350px;
+
+    -webkit-animation: orbitSmall 15s linear infinite; /* Chrome, Safari 5 */
+    -moz-animation: orbitSmall 15s linear infinite; /* Firefox 5-15 */
+      -o-animation: orbitSmall 15s linear infinite; /* Opera 12+ */
+         animation: orbitSmall 15s linear infinite; /* Chrome, Firefox 16+, 
+                                                   IE 10+, Safari 5 */
 }
 
 /*
@@ -62,22 +92,65 @@ Text Domain:	 workdojo
  * the animation.  The browser will interpolate all the frames between these 
  * points.  Again, remember your vendor-specific prefixes for now!
  */
-@-webkit-keyframes myOrbit {
+//  Orbit Small
+@-webkit-keyframes orbitSmall {
+    from { -webkit-transform: rotate(0deg) translateX(75px) rotate(0deg); }
+    to   { -webkit-transform: rotate(360deg) translateX(75px) rotate(-360deg); }
+}
+
+@-moz-keyframes orbitSmall {
+    from { -moz-transform: rotate(0deg) translateX(75px) rotate(0deg); }
+    to   { -moz-transform: rotate(360deg) translateX(75px) rotate(-360deg); }
+}
+
+@-o-keyframes orbitSmall {
+    from { -o-transform: rotate(0deg) translateX(75px) rotate(0deg); }
+    to   { -o-transform: rotate(360deg) translateX(75px) rotate(-360deg); }
+}
+
+@keyframes orbitSmall {
+    from { transform: rotate(0deg) translateX(75px) rotate(0deg); }
+    to   { transform: rotate(360deg) translateX(75px) rotate(-360deg); }
+}
+
+//  Orbit Medium
+@-webkit-keyframes orbitMedium {
     from { -webkit-transform: rotate(0deg) translateX(150px) rotate(0deg); }
     to   { -webkit-transform: rotate(360deg) translateX(150px) rotate(-360deg); }
 }
 
-@-moz-keyframes myOrbit {
+@-moz-keyframes orbitMedium {
     from { -moz-transform: rotate(0deg) translateX(150px) rotate(0deg); }
     to   { -moz-transform: rotate(360deg) translateX(150px) rotate(-360deg); }
 }
 
-@-o-keyframes myOrbit {
+@-o-keyframes orbitMedium {
     from { -o-transform: rotate(0deg) translateX(150px) rotate(0deg); }
     to   { -o-transform: rotate(360deg) translateX(150px) rotate(-360deg); }
 }
 
-@keyframes myOrbit {
+@keyframes orbitMedium {
     from { transform: rotate(0deg) translateX(150px) rotate(0deg); }
     to   { transform: rotate(360deg) translateX(150px) rotate(-360deg); }
+}
+
+// Orbit Large
+@-webkit-keyframes orbitLarge {
+    from { -webkit-transform: rotate(0deg) translateX(200px) rotate(0deg); }
+    to   { -webkit-transform: rotate(360deg) translateX(200px) rotate(-360deg); }
+}
+
+@-moz-keyframes orbitLarge {
+    from { -moz-transform: rotate(0deg) translateX(200px) rotate(0deg); }
+    to   { -moz-transform: rotate(360deg) translateX(200px) rotate(-360deg); }
+}
+
+@-o-keyframes orbitLarge {
+    from { -o-transform: rotate(0deg) translateX(200px) rotate(0deg); }
+    to   { -o-transform: rotate(360deg) translateX(200px) rotate(-360deg); }
+}
+
+@keyframes orbitLarge {
+    from { transform: rotate(0deg) translateX(200px) rotate(0deg); }
+    to   { transform: rotate(360deg) translateX(200px) rotate(-360deg); }
 }

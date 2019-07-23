@@ -48,6 +48,7 @@ get_header(); ?>
             </li>
           </ul>
         </div>
+        <div id="progress_bar"></div>
       </nav>
       <!-- / Navbar -->
 
@@ -63,11 +64,14 @@ get_header(); ?>
                   </div>
               </div>
           </div>
-          <img id=torii_gate src="/assets/images/torii-gate-red.svg" alt="">
+          <!-- Floating Images -->
+          <img id="torii_gate__floating" src="/wp-content/uploads/2019/07/torii-gate-red.svg" alt="">
+          <img id="yin_yang__floating" src="/wp-content/uploads/2019/07/yin-yang.svg" alt="">
+          <img id="fishes__floating" src="/wp-content/uploads/2019/07/red-blue-fishes.svg" alt="">
       </section>
 
       <figure>
-          <img class="img-fluid" src="assets/images/orange-block-accent.jpg" alt="Orange Block Accent">
+          <img class="img-fluid" src="/wp-content/uploads/2019/07/orange-block-accent.svg" alt="Orange Block Accent">
       </figure>
 
       <section id="about">
@@ -75,7 +79,7 @@ get_header(); ?>
               <div class="row align-items-center">
                   <div class="col-12 col-lg-6">
                       <figure>
-                          <img src="assets/images/red-blue-fishes.svg" alt="Red and Blue fish illustration">
+                          <img src="/wp-content/uploads/2019/07/red-blue-fishes.svg" alt="Red and Blue fish illustration">
                       </figure>
                   </div>
                   <div class="col-12 col-lg-6">
@@ -146,7 +150,7 @@ get_header(); ?>
               <div class="row align-items-center">
                   <div class="col-12 col-lg-4">
                       <figure>
-                          <img src="assets/images/mark-white.svg" alt="Work Dojo mark">
+                          <img src="/wp-content/uploads/2019/07/mark-white.svg" alt="Work Dojo mark">
                       </figure>
                   </div>
                   <div class="col-12 col-lg-7 offset-lg-1">
@@ -244,7 +248,7 @@ get_header(); ?>
             padding: 80px 0;
         }
         #HeroSection {
-            background: url('assets/images/fuji-mountain.png');
+            background: url('/wp-content/uploads/2019/07/fuji-mountain.svg');
             background-size: contain;
             background-position:right;
             background-repeat: no-repeat;
@@ -258,15 +262,6 @@ get_header(); ?>
         }
       </style>
 
-
-                        <script type="text/javascript">
-                            // Initialize simple parallax 
-                            var image = document.getElementsByClassName('train-tracks');
-                            new simpleParallax(image, {
-                                delay: .6,
-                                transition: 'cubic-bezier(0,0,0,1)'
-                            });
-                        </script>
 
 
                         <?

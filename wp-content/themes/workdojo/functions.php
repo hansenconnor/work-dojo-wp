@@ -16,6 +16,9 @@
 		// wp_enqueue_script('jquery', 'https://code.jquery.com/jquery-3.3.1.slim.min.js', '', '', true );
 		wp_enqueue_script('popper', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js' );
 		wp_enqueue_script('bootstrap', 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js', array( 'popper', 'jquery' ) );
+		// jQuery smooth scroll plugin
+		wp_enqueue_script('jquery-smooth-scroll', get_stylesheet_directory_uri() . '/libs/smooth-scroll-to-anchor-plugin-jquery/jquery.smoothscroll.min.js', array( 'jquery' ) );
+		wp_enqueue_script('index-js', get_stylesheet_directory_uri() . '/js/index.js', array( 'jquery' ) );
 
 		// Simple Parallax
 		wp_enqueue_script('simple-parallax', 'https://cdn.jsdelivr.net/npm/simple-parallax-js@5.0.2/dist/simpleParallax.min.js' );
