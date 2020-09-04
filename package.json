@@ -25,7 +25,7 @@
   "dependencies": {
     "bootstrap": "^4.3.1",
     "bootstrap-material-design": "^4.1.2",
-    "node-sass": "^4.12.0",
+    "node-sass": "^4.13.1",
     "node-sass-tilde-importer": "^1.0.2",
     "slick-carousel": "^1.8.1",
     "typeface-work-sans": "0.0.72"
